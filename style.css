@@ -164,6 +164,7 @@ p{
 } */
 
 footer {
+
   padding-top: 100px;
   background: rgba(255, 255, 255, 0.5);
 }
@@ -172,7 +173,6 @@ footer {
   display: flex;
   justify-content: space-around;
 }
-
 @media (max-width: 600px) {
   .banner img {
     object-fit: fill;
