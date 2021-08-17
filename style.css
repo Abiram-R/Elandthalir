@@ -3,17 +3,11 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: 'Merienda', sans-serif;
-  /* font-size: smaller; */
-  /* background-color: #19a186;
-  background-image: linear-gradient(315deg, #19a186 0%, #f2cf43 74%); */
-  background-color: #FFFB7D;
-  background-image: linear-gradient(45deg, #FFFB7D 0%, #85FFBD 100%);
-  /* #2fb128
-55443e */
-  /* background-color: #2fb128;
-background-image: linear-gradient(315deg, #2fb128 20%, #55443e 75%); */
-}
 
+  background-color: #FFFB7D;
+background-image: linear-gradient(45deg, #FFFB7D 0%, #85FFBD 100%);
+
+}
 .toast {
   width: 40vw;
   text-align: center;
@@ -27,7 +21,15 @@ background-image: linear-gradient(315deg, #2fb128 20%, #55443e 75%); */
   width: 100%;
   z-index: 2;
 }
-
+embed {
+  min-height: 1000px;
+  width: 600px;
+}
+.banner #form-fill{
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
 .banner {
   width: 100%;
   position: relative;
@@ -46,7 +48,6 @@ background-image: linear-gradient(315deg, #2fb128 20%, #55443e 75%); */
   z-index: 1;
   object-fit: cover;
 }
-
 .banner h1 {
   font-weight: 700;
   line-height: 2em;
@@ -56,25 +57,27 @@ background-image: linear-gradient(315deg, #2fb128 20%, #55443e 75%); */
   text-decoration: none;
   transition: all 2ms ease;
 }
-
 .banner small {
   font-size: 1em;
   color: black;
   font-weight: none;
 }
-
 .banner button {
   margin-top: 20px;
   border-radius: 50px;
   background-color: #4caf50;
   color: black;
 }
-
 .banner button:hover {
   transform: scale(1.2);
 }
-
-.banner .content {
+.banner #form-fill {
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+}
+.banner .content1 {
+  /* transform: translate(-50%); */
   border-radius: 10px;
   margin-left: 20px;
   font-size: 2vw;
@@ -84,29 +87,25 @@ background-image: linear-gradient(315deg, #2fb128 20%, #55443e 75%); */
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+
   height: 100%;
   position: relative;
   z-index: 3;
 }
-
-.banner .content:hover {
+.banner .content1:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
-
 .container-Support {
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: space-evenly;
 }
-
 .wrapper {
   padding-top: 10px;
 }
-
 .container-Support .Support {
   width: 500px;
 }
-
 .iframe-rwd {
   position: relative;
   overflow: hidden;
@@ -114,7 +113,6 @@ background-image: linear-gradient(315deg, #2fb128 20%, #55443e 75%); */
   margin: 10px;
   object-fit: cover;
 }
-
 /* qwl slider */
 
 .slider .card {
@@ -122,6 +120,7 @@ background-image: linear-gradient(315deg, #2fb128 20%, #55443e 75%); */
   margin: 10px;
   border-radius: 10px;
   overflow: hidden;
+  height: inherit;
 }
 
 .slider .card .img img {
@@ -132,8 +131,9 @@ background-image: linear-gradient(315deg, #2fb128 20%, #55443e 75%); */
 
 .slider .card .content {
   padding: 10px 20px;
+  height: 250px;
+  max-height: 500px;
 }
-
 .card .content p {
   text-align: justify;
   margin: 10px 0;
@@ -143,45 +143,41 @@ background-image: linear-gradient(315deg, #2fb128 20%, #55443e 75%); */
   text-align: center;
 }
 
-/* sdasd */
-
-/* .wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  font-family:Arial, Helvetica, sans-serif;
-  color:black;
-  font-size: 20px;
+.block {
+  top:0;;
+  right:0;
+  z-index: 100;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.1);
 }
-p{
-  font-size: larger;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family:Verdana, Geneva, Tahoma, sans-serif
-} */
-
 footer {
-
   padding-top: 100px;
   background: rgba(255, 255, 255, 0.5);
 }
 
-/* .fleX {
-  display: flex;
-  justify-content: space-around; */
-}
 @media (max-width: 600px) {
   .banner img {
     object-fit: fill;
     filter: blur(5px);
   }
 }
-.banneR{
- 
+.banneR {
   border-radius: 50px;
   background-color: #4caf50;
   color: black;
+}
+
+@media (max-width: 600px) {
+  .banner img {
+    object-fit: fill;
+    filter: blur(5px);
+  }
+    embed {
+    min-height: 1000px;
+    width: 320px;
+  }
 }
